@@ -36,7 +36,7 @@ class MantisHighlightPlugin extends MantisPlugin {
 		$this->description = lang_get( 'plugin_highlight_description' );
 		$this->page = 'config';
 
-		$this->version = '0.2';
+		$this->version = '0.3';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
@@ -44,6 +44,18 @@ class MantisHighlightPlugin extends MantisPlugin {
 		$this->author = 'Krasnov Kirill';
 		$this->contact = 'krasnovforum@gmail.com';
 		$this->url = 'http://kkrasnov.kanet.ru';
+	}
+	/*
+	 * Install plugin function.
+	 * Switch off Mantis Core Formating
+	 */
+	function install() {
+		helper_ensure_confirmed( lang_get( 'plugin_highlight_install_message' ), lang_get( 'plugin_install' ) );
+
+		config_set( 'plugin_MantisCoreFormatting_process_urls', OFF );
+		config_set( 'plugin_MantisCoreFormatting_process_text', OFF );
+
+		return true;
 	}
 
 	/*

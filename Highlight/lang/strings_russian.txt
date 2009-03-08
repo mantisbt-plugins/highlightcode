@@ -16,21 +16,11 @@
  * GNU General Public License for more details.
  */
 
-/*$s_plugin_MantisHighlight_title = 'Mantis KK Highlight';
-$s_plugin_MantisHighlight_description = 'Плагин подсветки кода для Mantis.';
-
-$s_plugin_MantisHighlight_message = 'Для использования плагина введите необходимый код в блок &lt;pre&gt; &lt;code&gt; и &lt;/code&gt; &lt;/pre&gt;.';
-
-$s_plugin_MantisHighlight_config = 'Настройка';
-$s_plugin_MantisHighlight_process_highlight = 'Использовать подсветку кода';
-$s_plugin_MantisHighlight_enabled = 'Да';
-$s_plugin_MantisHighlight_disabled = 'Нет';*/
-
 $s_plugin_highlight_title = 'Mantis KK Highlight';
 $s_plugin_highlight_description = 'Плагин подсветки кода для Mantis.';
 
 $s_plugin_highlight_message = 'Для использования плагина введите необходимый код в блок &lt;pre&gt;&lt;code&gt; и &lt;/code&gt;&lt;/pre&gt;.';
-
+$s_plugin_highlight_install_message = 'ВНИМАНИЕ: Устанавливая этот плагин, будет отключен встроенный механизм форматирования Текста и Ссылок.';
 $s_plugin_highlight_config = 'Настройка';
 $s_plugin_highlight_process_highlight = 'Использовать подсветку кода';
 $s_plugin_highlight_enabled = 'Да';

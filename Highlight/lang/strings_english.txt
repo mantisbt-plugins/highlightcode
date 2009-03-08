@@ -16,20 +16,12 @@
  * GNU General Public License for more details.
  */
 
-/*$s_plugin_MantisHighlight_title = 'Mantis KK Highlight';
-$s_plugin_MantisHighlight_description = 'Mantis plugin for highlighting code.';
 
-$s_plugin_MantisHighlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
-
-$s_plugin_MantisHighlight_config = 'Config';
-$s_plugin_MantisHighlight_process_highlight = 'Use highlight';
-$s_plugin_MantisHighlight_enabled = 'Yes';
-$s_plugin_MantisHighlight_disabled = 'No';*/
-
-$s_plugin_highlight_title = 'Mantis KK Highlight';
-$s_plugin_highlight_description = 'Mantis plugin for highlighting code.';
+$s_plugin_highlight_title = 'MantisBT KK Highlight';
+$s_plugin_highlight_description = 'MantisBT plugin for highlighting code.';
 
 $s_plugin_highlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
+$s_plugin_highlight_install_message = 'CAUTION: Installing this plugin will disable the default MantisBT text and URL formatting.';
 
 $s_plugin_highlight_config = 'Config';
 $s_plugin_highlight_process_highlight = 'Use highlight';
