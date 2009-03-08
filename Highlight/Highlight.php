@@ -36,7 +36,7 @@ class MantisHighlightPlugin extends MantisPlugin {
 		$this->description = lang_get( 'plugin_highlight_description' );
 		$this->page = 'config';
 
-		$this->version = '0.3';
+		$this->version = '0.4';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
