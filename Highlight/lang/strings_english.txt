@@ -1,0 +1,38 @@
+<?php
+/*
+ * Copyright (C) 2009	Kirill Krasnov
+ * ICQ					82427351
+ * JID					krak@jabber.ru
+ * Skype				kirillkr
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+/*$s_plugin_MantisHighlight_title = 'Mantis KK Highlight';
+$s_plugin_MantisHighlight_description = 'Mantis plugin for highlighting code.';
+
+$s_plugin_MantisHighlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
+
+$s_plugin_MantisHighlight_config = 'Config';
+$s_plugin_MantisHighlight_process_highlight = 'Use highlight';
+$s_plugin_MantisHighlight_enabled = 'Yes';
+$s_plugin_MantisHighlight_disabled = 'No';*/
+
+$s_plugin_highlight_title = 'Mantis KK Highlight';
+$s_plugin_highlight_description = 'Mantis plugin for highlighting code.';
+
+$s_plugin_highlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
+
+$s_plugin_highlight_config = 'Config';
+$s_plugin_highlight_process_highlight = 'Use highlight';
+$s_plugin_highlight_enabled = 'Yes';
+$s_plugin_highlight_disabled = 'No';
+?>
