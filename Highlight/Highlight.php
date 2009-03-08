@@ -36,7 +36,7 @@ class MantisHighlightPlugin extends MantisPlugin {
 		$this->description = lang_get( 'plugin_highlight_description' );
 		$this->page = 'config';
 
-		$this->version = '0.1';
+		$this->version = '0.2';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
@@ -66,7 +66,7 @@ class MantisHighlightPlugin extends MantisPlugin {
 		$t_st = '';
 		if ( ON == plugin_config_get( 'process_highlight' ) ){
 			if ( is_page_name('view.php') ) {
-				$t_st .= "\t<script type=\"text/javascript\" src=\"" . plugin_file( 'highlight.pack.js' ) . "\"></script>\n";
+				$t_st .= "\t<script type=\"text/javascript\" src=\"" . plugin_file( 'highlight_pack.js' ) . "\"></script>\n";
 				$t_st .= "\t<link rel=\"stylesheet\" title=\"Default\" href=\"" . plugin_file( 'styles/default.css' ) . "\" />\n";
 				$t_st .= "\t<script type=\"text/javascript\">\n";
 				$t_st .= "\t\thljs.tabReplace = '<span class=\"indent\">\t</span>';\n";
