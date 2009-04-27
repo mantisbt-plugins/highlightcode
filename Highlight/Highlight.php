@@ -26,7 +26,7 @@ require_once( config_get( 'class_path' ) . 'MantisPlugin.class.php' );
 /*
  *  MantisHighlight Class
  */
-class MantisHighlightPlugin extends MantisPlugin {
+class HighlightPlugin extends MantisPlugin {
 
 	/*
 	 *  A method that populates the plugin information and minimum requirements.
