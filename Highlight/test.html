@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>Highlight</title>
-  <meta http-equiv="Content-type" content='text/html;charset=UTF-8' />
+  <meta charset="utf-8">
 
   <link rel="stylesheet" title="Default" href="styles/default.css">
   <link rel="alternate stylesheet" title="Dark" href="styles/dark.css">
@@ -12,6 +12,10 @@
   <link rel="alternate stylesheet" title="Visual Studio" href="styles/vs.css">
   <link rel="alternate stylesheet" title="Ascetic" href="styles/ascetic.css">
   <link rel="alternate stylesheet" title="Magula" href="styles/magula.css">
+  <link rel="alternate stylesheet" title="GitHub" href="styles/github.css">
+  <link rel="alternate stylesheet" title="Brown Paper" href="styles/brown_paper.css">
+  <link rel="alternate stylesheet" title="School Book" href="styles/school_book.css">
+  <link rel="alternate stylesheet" title="IR_Black" href="styles/ir_black.css">
   <style>
     h2 {
       font: bold 100% Arial, sans-serif;
@@ -50,10 +54,10 @@
 
   <!--
   Don't include languages as individual files in production environment.
-  Instead use <script src="highlight.pack.js"></src> with highlight.pack.js
+  Instead use <script src="highlight.pack.js"></script> with highlight.pack.js
   containing all the languages you've chosen when downloading the library
   -->
-  <script src="highlight.js"></script>
+  <!--script src="highlight.js"></script>
   <script src="languages/cs.js"></script>
   <script src="languages/python.js"></script>
   <script src="languages/mel.js"></script>
@@ -81,6 +85,7 @@
   <script src="languages/php.js"></script>
   <script src="languages/diff.js"></script>
   <script src="languages/avrasm.js"></script>
+  <script src="languages/parser3.js"></script>
   <script>
   hljs.tabReplace = '    ';
   hljs.initHighlightingOnLoad();
@@ -350,6 +355,15 @@ html {
   background: url('hatch.png');
 }
 
+@import url('print.css');
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @page :left {
+    body:first-of-type pre::after {
+      content: 'highlight: ' attr(class);
+    }
+}
+
 #content {
   width: 100%; /* wide enough */
   height: 100%
@@ -511,7 +525,7 @@ int main(int argc, char *argv[]) {
 
   char c = '\n'; // just a test
   map &lt;string, vector&lt;string&gt; &gt; m;
-  m["key"] = "\\\\"; // yaeh, I know it's an error
+  m["key"] = "\\\\"; // yeah, I know it's an error
 }
 </code></pre>
 
@@ -722,6 +736,7 @@ heapExample
 [Database]
 ProfileDir=.
 ShowProfileMgr=smart
+Profile1_Name[] = "\|/_-=MegaDestoyer=-_\|/"
 DefaultProfile=True
 AutoCreate = no
 
@@ -925,6 +940,46 @@ flash2ram:
 .def    ramtemp =r1     ;temporary storage register
 .def    ramsize =r16        ;size of block to be copied
 </code></pre>
+
+  <tr>
+    <th>Parser 3
+    <td>
+<pre><code>@CLASS
+base
+
+@USE
+module.p
+
+@BASE
+class
+
+# Comment for code
+@create[aParam1;aParam2][local1;local2]
+  ^connect[mysql://host/database?ClientCharset=windows-1251]
+  ^for[i](1;10){
+    &lt;p class=&quot;paragraph&quot;&gt;^eval($i+10)&lt;/p&gt;
+    ^connect[mysql://host/database]{
+      $tab[^table::sql{select * from `table` where a='1'}]
+      $var_Name[some${value}]
+    }
+  }
+
+  ^rem{
+    Multiline comment with code: $var
+    ^while(true){
+      ^for[i](1;10){
+        ^sleep[]
+      }
+    }
+  }
+  ^taint[^#0A]
+
+@GET_base[]
+## Comment for code
+  # Isn't comment
+  $result[$.hash_item1[one] $.hash_item2[two]]
+</code></pre>
+
 </table>
 
 <h2>Special tests</h2>
@@ -934,6 +989,20 @@ flash2ram:
     <th>Explicit Python highlighting
     <td>
 <pre><code class="python">for x in [1, 2, 3]:
+  count(x)
+</code></pre>
+
+  <tr>
+    <th>Language set on &lt;pre&gt;
+    <td>
+<pre class="python"><code>for x in [1, 2, 3]:
+  count(x)
+</code></pre>
+
+  <tr>
+    <th>HTML5-style language class (language-python)
+    <td>
+<pre class="python"><code>for x in [1, 2, 3]:
   count(x)
 </code></pre>
 
@@ -953,10 +1022,10 @@ flash2ram:
 </code></pre>
 
   <tr>
-    <th>Custom markup is left intact
+    <th>Custom markup
     <td>
-<pre><code>&lt;div id="contents"&gt;
-  &lt;p&gt;<b><i>Hello, World!</i></b>
+<pre><code>&lt;<a href="http://dev.w3.org/html5/spec/Overview.html#the-div-element">div</a> id="contents"&gt;
+  <del>&lt;p&gt;Hello, World!</del>
 &lt;/div&gt;
 </code></pre>
 

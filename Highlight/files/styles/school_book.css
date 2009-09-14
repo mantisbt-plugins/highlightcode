@@ -1,35 +1,40 @@
-﻿/*
+/*
 
-Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+School Book style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
 
 */
 
 pre code[class]:after {
   content: 'highlight: ' attr(class);
   display: block; text-align: right;
-  font-size: smaller;
-  color: #CCC; background: white;
-  border-top: solid 1px black;
+  color: #CCC; background: transparent;
+
   padding-top: 0.5em;
 }
 
 pre code {
   display: block;
-  background: #444;
-}
-
+  margin-left:30px;
+  margin-top:15px;
+    font-size: 11px !important;
+  line-height:16px !important;
+  }
+pre{background:#f6f6ae url(./school_book.png);
+	border-top: solid 2px #d2e8b9;
+	border-bottom: solid 1px #d2e8b9;}
 .keyword,
 .literal,
 .change,
 .winutils,
 .flow,
 .lisp .title {
-  color: white;
+  color:#005599;
+  font-weight:bold;
 }
 
 pre code,
 .ruby .subst {
-  color: #DDD;
+  color: #3E5915;
 }
 
 .string,
@@ -59,7 +64,7 @@ pre code,
 .envvar,
 .apache .tag,
 .apache .cbracket {
-  color: #D88;
+  color: #2C009F;
 }
 
 .comment,
@@ -71,7 +76,7 @@ pre code,
 .deletion,
 .shebang,
 .apache .sqbracket {
-  color: #777;
+  color: #E60415;
 }
 
 .keyword,
@@ -97,5 +102,5 @@ pre code,
 .html .css,
 .html .javascript,
 .html .vbscript {
-  opacity: 0.5;
+  opacity: 0.8;
 }

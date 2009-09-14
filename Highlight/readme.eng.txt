@@ -177,7 +177,9 @@ CSS ("css"):
   keyword          HTML tag when in selectors, CSS keyword when in rules
   id               #some_name in selectors
   class            .some_name in selectors
+  at_rule          @-rule till first "{" or ";"
   attr_selector    attribute selector (square brackets in a[href^=http://])
+  pseudo           pseudo classes and elemens (:after, ::after etc.)
   comment          comment
   rules            everything from "{" till "}"
   value            property's value inside a rule, from ":" till ";" or
@@ -403,6 +405,15 @@ AVR assembler ("avrasm"):
   preprocessor     preprocessor directive
   localvars        substitution in .macro
 
+Parser3 ("parser3"):
+
+  keyword          keyword
+  number           number
+  comment          commment
+  variable         variable starting with "$"
+  preprocessor     preprocessor directive
+  title            user-defined name starting with "@"
+
 ## Heuristics
 
 Autodetection of a code's language is done with a simple heuristics:
@@ -416,13 +427,16 @@ language explicitly by assigning a class to the `<code>` element:
 
     <pre><code class="html">...</code></pre>
 
+You can use class names recommended in HTML5: "language-html",
+"language-php". Classes also can be assigned to the `<pre>` element.
+
 To disable highlighting of a fragment altogether use "no-highlight" class:
 
     <pre><code class="no-highlight">...</code></pre>
 
 ## Contacts
 
-Version: 5.2
+Version: 5.5
 URL:     http://softwaremaniacs.org/soft/highlight/en/
 Author:  Ivan Sagalaev (Maniac@SoftwareManiacs.Org)
 

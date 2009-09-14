@@ -1,4 +1,4 @@
-/*
+﻿/*
 
 Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 
@@ -73,6 +73,7 @@ pre code,
 .localvars,
 .array,
 .attr_selector,
+.pseudo,
 .pi,
 .doctype,
 .deletion,
@@ -86,10 +87,7 @@ pre code,
 .id,
 .phpdoc,
 .title,
-.vbscript .built_in,
-.rsl .built_in,
-.cpp .built_in,
-.avrasm .built_in,
+.built_in,
 .aggregate,
 .smalltalk .class,
 .winutils,

@@ -17,14 +17,15 @@
  */
 
 
-$s_plugin_highlight_title = 'MantisBT KK Highlight';
-$s_plugin_highlight_description = 'MantisBT plugin for highlighting code.';
+$s_plugin_Highlight_title = 'MantisBT KK Highlight';
+$s_plugin_Highlight_description = 'MantisBT plugin for highlighting code.';
 
-$s_plugin_highlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
-$s_plugin_highlight_install_message = 'CAUTION: Installing this plugin will disable the default MantisBT text and URL formatting.';
+$s_plugin_Highlight_message = 'For use include needed code between &lt;pre&gt;&lt;code&gt; and &lt;/code&gt;&lt;/pre&gt;.';
+$s_plugin_Highlight_install_message = 'CAUTION: Installing this plugin will disable the default MantisBT text and URL formatting.';
 
-$s_plugin_highlight_config = 'Config';
-$s_plugin_highlight_process_highlight = 'Use highlight';
-$s_plugin_highlight_enabled = 'Yes';
-$s_plugin_highlight_disabled = 'No';
+$s_plugin_Highlight_config = 'Config';
+$s_plugin_Highlight_process_highlight = 'Use highlight';
+$s_plugin_Highlight_enabled = 'Yes';
+$s_plugin_Highlight_disabled = 'No';
+$s_plugin_Highlight_style_css = 'Style css';
 ?>

@@ -182,7 +182,9 @@ CSS ("css"):
   keyword          тег языка HTML в селекторах или свойство CSS в правилах
   id               #some_name в селекторах
   class            .some_name в селекторах
+  at_rule          @-rule до первого "{" или ";"
   attr_selector    селектор атрибутов (квадатные скобоки в a[href^=http://])
+  pseudo           псевдо-классы и элементы (:after, ::after и т.д.)
   comment          комментарий
   rules            все от "{" до "}"
   value            значение свойства внутри правила, все от ":" до ";" или
@@ -409,6 +411,15 @@ AVR ассемблер ("avrasm"):
   preprocessor     директива препроцессора
   localvars        подстановка в .macro
 
+Parser3 ("parser3"):
+
+  keyword          ключевое слово языка
+  number           число
+  comment          комментарий
+  variable         переменная, начинающаяся с "$"
+  preprocessor     директива препроцессора
+  title            пользовательское имя, начинающееся с "@"
+
 
 ## Эвристика
 
@@ -424,13 +435,17 @@ AVR ассемблер ("avrasm"):
 
     <pre><code class="html">...</code></pre>
 
+Можно использовать рекомендованные в HTML5 названия классов:
+"language-html", "language-php". Также можно назначать классы на элемент
+`<pre>`.
+
 Чтобы запретить расцветку фрагмента вообще, используется класс "no-highlight":
 
     <pre><code class="no-highlight">...</code></pre>
 
 ## Координаты
 
-Версия: 5.2
+Версия: 5.5
 URL:    http://softwaremaniacs.org/soft/highlight/
 Автор:  Иван Сагалаев (Maniac@SoftwareManiacs.Org)
 

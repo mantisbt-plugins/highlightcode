@@ -19,40 +19,62 @@
 auth_reauthenticate( );
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
-html_page_top1( lang_get( 'plugin_highlight_title' ) );
+html_page_top1( plugin_lang_get( 'title' ) );
 html_page_top2( );
 
 print_manage_menu( );
 
+	$f_style_css = plugin_config_get( 'style_css' );
 ?>
 
 <br/>
 <form action="<?php echo plugin_page( 'config_edit' )?>" method="post">
+<?php echo form_security_field( 'plugin_Highlight_manage_config' ) ?>
 <table align="center" class="width50" cellspacing="1">
 
 <tr>
 	<td class="form-title" colspan="3">
-		<?php echo lang_get( 'plugin_highlight_title' ) . ': ' . lang_get( 'plugin_highlight_config' )?>
+		<?php echo plugin_lang_get( 'title' ) . ': ' . plugin_lang_get( 'config' )?>
 	</td>
 </tr>
 
 <tr>
 	<td class="form-title" colspan="3">
-		<?php echo lang_get( 'plugin_highlight_message' )?>
+		<?php echo plugin_lang_get( 'message' )?>
 	</td>
 </tr>
 
 <tr <?php echo helper_alternate_class( )?>>
 	<td class="category" width="60%">
-		<?php echo lang_get( 'plugin_highlight_process_highlight' )?>
+		<?php echo plugin_lang_get( 'process_highlight' )?>
 	</td>
 	<td class="center" width="20%">
 		<label><input type="radio" name="process_highlight" value="1" <?php echo( ON == plugin_config_get( 'process_highlight' ) ) ? 'checked="checked" ' : ''?>/>
-			<?php echo lang_get( 'plugin_highlight_enabled' )?></label>
+			<?php echo plugin_lang_get( 'enabled' )?></label>
 	</td>
 	<td class="center" width="20%">
 		<label><input type="radio" name="process_highlight" value="0" <?php echo( OFF == plugin_config_get( 'process_highlight' ) ) ? 'checked="checked" ' : ''?>/>
-			<?php echo lang_get( 'plugin_highlight_disabled' )?></label>
+			<?php echo plugin_lang_get( 'disabled' )?></label>
+	</td>
+</tr>
+
+<tr <?php echo helper_alternate_class() ?>>
+	<td class="category">
+		<?php echo plugin_lang_get( 'style_css' ) ?>
+	</td>
+	<td colspan = 2 >
+		<select name="style_css">
+			<?php
+				$t_arr = explode( ',', 'ascetic,brown_paper,dark,default,far,github,idea,ir_black,magula,school_book,sunburst,vs,zenburn' );
+				$enum_count = count( $t_arr );
+				for( $i = 0;$i < $enum_count;$i++ ) {
+					$t_style = string_attribute( $t_arr[$i] );
+					echo '<option value="' . $t_style . '"';
+					check_selected( $t_style, $f_style_css );
+					echo '>' . $t_style . '</option>';
+				}
+			?>
+		</select>
 	</td>
 </tr>
 
@@ -66,4 +88,4 @@ print_manage_menu( );
 <form>
 
 <?php
-html_page_bottom1( __FILE__ );
+html_page_bottom1( );

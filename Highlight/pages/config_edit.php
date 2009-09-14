@@ -14,13 +14,20 @@
 # You should have received a copy of the GNU General Public License
 # along with MantisBT.  If not, see <http://www.gnu.org/licenses/>.
 
+form_security_validate( 'plugin_Highlight_manage_config' );
 auth_reauthenticate( );
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
+$f_style_css = gpc_get_string( 'style_css', 'default' );
 $f_process_highlight = gpc_get_int( 'process_highlight', ON );
 
 if( plugin_config_get( 'process_highlight' ) != $f_process_highlight ) {
 	plugin_config_set( 'process_highlight', $f_process_highlight );
 }
 
+if( plugin_config_get( 'style_css' ) != $f_style_css ) {
+	plugin_config_set( 'style_css', $f_style_css );
+}
+
+form_security_purge( 'plugin_Highlight_manage_config' );
 print_successful_redirect( plugin_page( 'config', true ) );
