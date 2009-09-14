@@ -48,10 +48,12 @@ function restore_pre_code_tags( $p_string, $p_multiline = true ) {
 	}
 	$tags = implode( '|', $tags );
 
+//	$tags = 'pre|code|code\s\S+';
 	$t_string = preg_replace( '/&lt;(' . $tags . ')\s*&gt;/ui', '<\\1>', $t_string );
 	$t_string = preg_replace( '/&lt;\/(' . $tags . ')\s*&gt;/ui', '</\\1>', $t_string );
 	$t_string = preg_replace( '/&lt;(' . $tags . ')\s*\/&gt;/ui', '<\\1 />', $t_string );
-
+	$t_string = preg_replace( '/&lt;(code)\sclass=&quot;(\S+)&quot;\s*&gt;/ui', '<\\1 class="\\2">', $t_string );
+	
 	return $t_string;
 }	
 
@@ -68,7 +70,7 @@ class HighlightPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 
-		$this->version = '0.4.3';
+		$this->version = '0.4.4';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
