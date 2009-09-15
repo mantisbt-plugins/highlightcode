@@ -70,7 +70,7 @@ class HighlightPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 
-		$this->version = '0.4.4';
+		$this->version = '0.4.5';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
