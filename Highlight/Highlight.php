@@ -34,7 +34,7 @@ require_once( config_get( 'class_path' ) . 'MantisPlugin.class.php' );
 function restore_pre_code_tags( $p_string, $p_multiline = true ) {
 	$t_string = $p_string;
 	$tags = '';
-	$t_html_pre_code_tags = "pre, code";
+	$t_html_pre_code_tags = "br, pre, code";
 
 	if( is_blank( $t_html_pre_code_tags ) ) {
 		return $t_string;

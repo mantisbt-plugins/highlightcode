@@ -26,4 +26,6 @@ $s_plugin_Highlight_process_highlight = 'Использовать подсвет
 $s_plugin_Highlight_enabled = 'Да';
 $s_plugin_Highlight_disabled = 'Нет';
 $s_plugin_Highlight_style_css = 'Стиль css';
+
+$s_plugin_Highlight_credits = 'Благодарность';
 ?>

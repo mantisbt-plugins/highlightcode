@@ -28,4 +28,6 @@ $s_plugin_Highlight_process_highlight = 'Use highlight';
 $s_plugin_Highlight_enabled = 'Yes';
 $s_plugin_Highlight_disabled = 'No';
 $s_plugin_Highlight_style_css = 'Style css';
+
+$s_plugin_Highlight_credits = 'Credits';
 ?>

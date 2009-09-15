@@ -33,9 +33,10 @@ print_manage_menu( );
 <table align="center" class="width50" cellspacing="1">
 
 <tr>
-	<td class="form-title" colspan="3">
+	<td class="form-title" colspan="2">
 		<?php echo plugin_lang_get( 'title' ) . ': ' . plugin_lang_get( 'config' )?>
 	</td>
+	<td class="right"><?php print_bracket_link( plugin_page( 'credits' ), plugin_lang_get( 'credits' ) );?></td>
 </tr>
 
 <tr>
