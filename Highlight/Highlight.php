@@ -48,15 +48,14 @@ function restore_pre_code_tags( $p_string, $p_multiline = true ) {
 	}
 	$tags = implode( '|', $tags );
 
-//	$tags = 'pre|code|code\s\S+';
 	$t_string = preg_replace( '/&lt;(' . $tags . ')\s*&gt;/ui', '<\\1>', $t_string );
 	$t_string = preg_replace( '/&lt;\/(' . $tags . ')\s*&gt;/ui', '</\\1>', $t_string );
 	$t_string = preg_replace( '/&lt;(' . $tags . ')\s*\/&gt;/ui', '<\\1 />', $t_string );
 	$t_string = preg_replace( '/&lt;(code)\sclass=&quot;(\S+)&quot;\s*&gt;/ui', '<\\1 class="\\2">', $t_string );
 	$t_string = preg_replace( '/&lt;a\shref=&quot;(\S+)&quot;&gt;.+&lt;\/a&gt;\s\[&lt;a\shref=&quot;(\S+)&quot;\starget=&quot;_blank&quot;&gt;\^&lt;\/a&gt;\]/ui', '<a href="\\1">\\1</a> [<a href="\\1" target="_blank">^</a>]', $t_string );
-	
+
 	return $t_string;
-}	
+}
 
 /**
  *  HighlightPlugin Class
@@ -78,7 +77,7 @@ class HighlightPlugin extends MantisPlugin {
 		$this->uses = array(
 			'MantisCoreFormatting' => '1.0a',
 		);
-		
+
 		$this->author = 'Krasnov Kirill';
 		$this->contact = 'krasnovforum@gmail.com';
 		$this->url = 'http://www.kraeg.ru';
@@ -89,11 +88,6 @@ class HighlightPlugin extends MantisPlugin {
 	 * Switch off Mantis Core Formating
 	 */
 	function install() {
-		//helper_ensure_confirmed( plugin_lang_get( 'install_message' ), lang_get( 'plugin_install' ) );
-
-		//config_set( 'plugin_MantisCoreFormatting_process_urls', OFF );
-		//config_set( 'plugin_MantisCoreFormatting_process_text', OFF );
-
 		return true;
 	}
 
@@ -136,27 +130,10 @@ class HighlightPlugin extends MantisPlugin {
 	function formatted( $p_event, $p_string, $p_multiline = true ) {
 		$t_string = $p_string;
 
-		//$t_string = string_strip_hrefs( $t_string );
 		$t_string = string_html_specialchars( $t_string );
 		$t_string = restore_pre_code_tags( $t_string );
 
-		//if( $p_multiline ) {
-			//$t_string = string_preserve_spaces_at_bol( $t_string );
-			//$t_string = string_nl2br( $t_string );
-		//}
-
-		//$t_string = string_insert_hrefs( $t_string );
-
-		//if( ON == plugin_config_get( 'process_buglinks' ) ) {
-			//$t_string = string_process_bug_link( $t_string );
-			//$t_string = string_process_bugnote_link( $t_string );
-		//}
-
-		//if( ON == plugin_config_get( 'process_vcslinks' ) ) {
-		//	$t_string = string_process_cvs_link( $t_string );
-		//}
 		return $t_string;
 	}
 
 }
-?>
