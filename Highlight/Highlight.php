@@ -53,6 +53,7 @@ function restore_pre_code_tags( $p_string, $p_multiline = true ) {
 	$t_string = preg_replace( '/&lt;\/(' . $tags . ')\s*&gt;/ui', '</\\1>', $t_string );
 	$t_string = preg_replace( '/&lt;(' . $tags . ')\s*\/&gt;/ui', '<\\1 />', $t_string );
 	$t_string = preg_replace( '/&lt;(code)\sclass=&quot;(\S+)&quot;\s*&gt;/ui', '<\\1 class="\\2">', $t_string );
+	$t_string = preg_replace( '/&lt;a\shref=&quot;(\S+)&quot;&gt;.+&lt;\/a&gt;\s\[&lt;a\shref=&quot;(\S+)&quot;\starget=&quot;_blank&quot;&gt;\^&lt;\/a&gt;\]/ui', '<a href="\\1">\\1</a> [<a href="\\1" target="_blank">^</a>]', $t_string );
 	
 	return $t_string;
 }	
@@ -70,14 +71,17 @@ class HighlightPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 
-		$this->version = '0.4.5';
+		$this->version = '0.4.6';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
-
+		$this->uses = array(
+			'MantisCoreFormatting' => '1.0a',
+		);
+		
 		$this->author = 'Krasnov Kirill';
 		$this->contact = 'krasnovforum@gmail.com';
-		$this->url = 'http://kkrasnov.kanet.ru';
+		$this->url = 'http://www.kraeg.ru';
 	}
 
 	/**
@@ -85,10 +89,10 @@ class HighlightPlugin extends MantisPlugin {
 	 * Switch off Mantis Core Formating
 	 */
 	function install() {
-		helper_ensure_confirmed( plugin_lang_get( 'install_message' ), lang_get( 'plugin_install' ) );
+		//helper_ensure_confirmed( plugin_lang_get( 'install_message' ), lang_get( 'plugin_install' ) );
 
-		config_set( 'plugin_MantisCoreFormatting_process_urls', OFF );
-		config_set( 'plugin_MantisCoreFormatting_process_text', OFF );
+		//config_set( 'plugin_MantisCoreFormatting_process_urls', OFF );
+		//config_set( 'plugin_MantisCoreFormatting_process_text', OFF );
 
 		return true;
 	}
