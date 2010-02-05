@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (C) 2009	Kirill Krasnov
+ * Copyright (C) 2009-2010	Kirill Krasnov
  * ICQ					82427351
  * JID					krak@jabber.ru
  * Skype				kirillkr
