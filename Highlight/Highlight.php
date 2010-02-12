@@ -19,12 +19,6 @@
  */
 
 /**
- *  requires MantisPlugin.class.php
- */
-
-require_once( config_get( 'class_path' ) . 'MantisPlugin.class.php' );
-
-/**
  * restore 2 html tags: <pre> and <code>
  * from string like &lt;pre&gt;
  * @param string $p_string
