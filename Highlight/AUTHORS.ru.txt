@@ -3,7 +3,7 @@
 URL:   http://softwaremaniacs.org/soft/highlight/
 
 Первоначальный автор и ведущий проекта:
-Иван Сагалаев <Maniac@SoftwareManiacs.Org>
+Иван Сагалаев <maniac@softwaremaniacs.org>
 
 Внесли свой вклад:
 
@@ -31,3 +31,25 @@ URL:   http://softwaremaniacs.org/soft/highlight/
 - Зарипов Юра <yur4ik7@ukr.net>
 - Олег Волчков <oleg@volchkov.net>
 - Василий Михайличенко <vaskas@programica.ru>
+- Ян Беркель <jan.berkel@gmail.com>
+- Владимир Москва <vladmos@gmail.com>
+- Лорен Сегал <lsegal@soen.ca>
+- Андрей Фёдоров <dmmdrs@mail.ru>
+- Игорь Кальницкий <igor.kalnitsky@gmail.com>
+- Джереми Халл <sourdrums@gmail.com>
+- Валерий Хиора <valerii.hiora@gmail.com>
+- Николай Захаров <nikolay.desh@gmail.com>
+- Дмитрий Ковега <arhibot@gmail.com>
+- Сергей Игнатов <sergey@ignatov.spb.su>
+- Антоно Васильев <self@antono.info>
+- Степан Кунцьо <steplg@gmail.com>
+- pumbur <pumbur@pumbur.net>
+- Джон Крепецци <john.crepezzi@gmail.com>
+- Андрей Власовских <andrey.vlasovskikh@gmail.com>
+- Александр Мядзель <myadzel@gmail.com>
+- Евгений Степанищев <imbolk@gmail.com>
+- Дмитрий Нагирняк <dnagir@gmail.com>
+- Олег Ефимов <efimovov@gmail.com>
+- Луиджи Мазелли <grigio.org@gmail.com>
+- Денис Бардадым <bardadymchik@gmail.com>
+- Аахан Криш <geekpanth3r@gmail.com>

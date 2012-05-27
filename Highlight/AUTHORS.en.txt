@@ -3,7 +3,7 @@ Syntax highlighting with language autodetection.
 URL:   http://softwaremaniacs.org/soft/highlight/en/
 
 Original author and current maintainer:
-Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Ivan Sagalaev <maniac@softwaremaniacs.org>
 
 Contributors:
 
@@ -31,3 +31,25 @@ Contributors:
 - Zaripov Yura <yur4ik7@ukr.net>
 - Oleg Volchkov <oleg@volchkov.net>
 - Vasily Mikhailitchenko <vaskas@programica.ru>
+- Jan Berkel <jan.berkel@gmail.com>
+- Vladimir Moskva <vladmos@gmail.com>
+- Loren Segal <lsegal@soen.ca>
+- Andrew Fedorov <dmmdrs@mail.ru>
+- Igor Kalnitsky <igor.kalnitsky@gmail.com>
+- Jeremy Hull <sourdrums@gmail.com>
+- Valerii Hiora <valerii.hiora@gmail.com>
+- Nikolay Zakharov <nikolay.desh@gmail.com>
+- Dmitry Kovega <arhibot@gmail.com>
+- Sergey Ignatov <sergey@ignatov.spb.su>
+- Antono Vasiljev <self@antono.info>
+- Stephan Kountso <steplg@gmail.com>
+- pumbur <pumbur@pumbur.net>
+- John Crepezzi <john.crepezzi@gmail.com>
+- Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>
+- Alexander Myadzel <myadzel@gmail.com>
+- Evgeny Stepanischev <imbolk@gmail.com>
+- Dmytrii Nagirniak <dnagir@gmail.com>
+- Oleg Efimov <efimovov@gmail.com>
+- Luigi Maselli <grigio.org@gmail.com>
+- Denis Bardadym <bardadymchik@gmail.com>
+- Aahan Krish <geekpanth3r@gmail.com>
