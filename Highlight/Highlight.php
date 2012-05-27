@@ -2,7 +2,7 @@
 /**
  * Created on 22.02.2009
  *
- * Copyright (C) 2009-2010	Kirill Krasnov
+ * Copyright (C) 2009-2012	Kirill Krasnov
  * ICQ					82427351
  * JID					krak@jabber.ru
  * Skype				kirillkr
@@ -64,7 +64,7 @@ class HighlightPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
 
-		$this->version = '0.4.6';
+		$this->version = '0.4.7';
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
 		);
@@ -108,14 +108,15 @@ class HighlightPlugin extends MantisPlugin {
 
 	function print_head_highlight( ) {
 		$t_st = '';
+		$nl = "\n";
 		if ( ON == plugin_config_get( 'process_highlight' ) ){
 			if ( is_page_name('view.php') ) {
-				$t_st .= "\t<script type=\"text/javascript\" src=\"" . plugin_file( 'highlight_pack.js' ) . "\"></script>\n";
-				$t_st .= "\t<link rel=\"stylesheet\" title=\"" . plugin_config_get( 'style_css' ) . "\" href=\"" . plugin_file( 'styles/' . plugin_config_get( 'style_css' ) . '.css' ) . "\" />\n";
-				$t_st .= "\t<script type=\"text/javascript\">\n";
-				$t_st .= "\t\thljs.tabReplace = '<span class=\"indent\">\t</span>';\n";
-				$t_st .= "\t\thljs.initHighlightingOnLoad();\n";
-				$t_st .= "\t</script>\n";
+				$t_st .= '<script type="text/javascript" src="' . plugin_file( 'highlight_pack.js' ) . '"></script>' . $nl;
+				$t_st .= '<link rel="stylesheet" type="text/css" href="' . plugin_file( 'styles/' . plugin_config_get( 'style_css' ) . '.css' ) . '" />' . $nl;
+				$t_st .= '<script type="text/javascript">' . $nl;
+//				$t_st .= 'hljs.tabReplace = "    ";' . $nl;
+				$t_st .= 'hljs.initHighlightingOnLoad();' . $nl;
+				$t_st .= '</script>' . $nl;
 			}
 		}
 		return $t_st;
@@ -124,7 +125,7 @@ class HighlightPlugin extends MantisPlugin {
 	function formatted( $p_event, $p_string, $p_multiline = true ) {
 		$t_string = $p_string;
 
-		$t_string = string_html_specialchars( $t_string );
+		//$t_string = string_html_specialchars( $t_string );
 		$t_string = restore_pre_code_tags( $t_string );
 
 		return $t_string;

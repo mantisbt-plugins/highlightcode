@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (C) 2009-2010	Kirill Krasnov
+ * Copyright (C) 2009-2012	Kirill Krasnov
  * ICQ					82427351
  * JID					krak@jabber.ru
  * Skype				kirillkr
@@ -66,7 +66,7 @@ print_manage_menu( );
 	<td colspan = 2 >
 		<select name="style_css">
 			<?php
-				$t_arr = explode( ',', 'ascetic,brown_paper,dark,default,far,github,idea,ir_black,magula,school_book,sunburst,vs,zenburn' );
+				$t_arr = explode( ',', 'arta,ascetic,dark,default,far,github,googlecode,idea,ir_black,magula,monokai,solarized_dark,solarized_light,sunburst,vs,zenburn' );
 				$enum_count = count( $t_arr );
 				for( $i = 0;$i < $enum_count;$i++ ) {
 					$t_style = string_attribute( $t_arr[$i] );
